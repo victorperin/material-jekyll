@@ -1,0 +1,21 @@
+{
+  "name": "material-jekyll",
+  "version": "0.0.0",
+  "homepage": "https://github.com/victorperin/material-jekyll",
+  "authors": [
+    "Victor Perin <me@victorperin.com>"
+  ],
+  "description": "A material design theme for jekyll..",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "~0.7.2",
+    "materialize": "~0.96.1"
+  }
+}

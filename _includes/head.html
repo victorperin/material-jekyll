@@ -1,0 +1,29 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }} - {{ site.description }}">
+  {% else %}
+    <meta name="description" content="{{ site.description }}">
+  {% endif %}
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <script> //esse script checa se seu browser suporta webcomponents. Caso não suporte, carrega a biblioteca webcomponents
+    var testarWebComponents = 'registerElement' in document &&
+                              'createShadowRoot' in HTMLElement.prototype &&
+                              'import' in document.createElement('link') &&
+                              'import' in document.createElement('link');
+    if (testarWebComponents) console.log('Legal! Seu browser tem suporte nativo aos CustomElements!');
+    else {
+      document.write('<script src="\/bower_components\/webcomponentsjs\/webcomponents.min.js" onload="loaded();"><\/script>');
+      console.log("Seu browser não tem suporte nativo aos CustomElements, mas isso não é problema.");
+    }
+    function loaded(){console.log("CustomElements.min.js carregado. Agora é possível usar webcomponents. :)");}
+  </script>
+  <script src="/js/avatar-container.es5.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+</head>
