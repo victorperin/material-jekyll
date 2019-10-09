@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "bower_components/webcomponentsjs/package.json"
+      ]
+    }
+  }
+}
